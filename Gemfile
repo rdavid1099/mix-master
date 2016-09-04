@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'rails_12factor', group: :production
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'
@@ -35,6 +36,8 @@ group :development, :test do
   gem 'byebug'
   gem 'rspec-rails'
   gem 'pry-rails'
+  gem 'capybara'
+  gem 'launchy'
 end
 
 group :development do
