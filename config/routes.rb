@@ -6,4 +6,9 @@ Rails.application.routes.draw do
 
   resources :songs, only: [:show, :edit, :update]
   get '/songs', to: "songs#index_all"
+
+  get '/playlists', to: "playlists#index"
+  get '/playlists/:id', to: "playlists#show"
+  get '/playlists/new', to: "playlists#new"
+  post '/playlists', to: "playlists#create"
 end
