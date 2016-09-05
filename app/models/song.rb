@@ -4,4 +4,9 @@ class Song < ActiveRecord::Base
   belongs_to :artist
 
   validates :title, presence: true
+
+  def in?(playlist)
+    playlist.songs.exists?(id)
+  end
+
 end
